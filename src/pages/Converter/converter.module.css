@@ -1,0 +1,78 @@
+.converter {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.converterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.converterWrapper {
+    display: flex;
+}
+
+.converterContainer svg {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+}
+
+.converterContainer svg path {
+    transition: all .3s;
+}
+
+.converterContainer svg:hover path {
+    fill: #fff;
+}
+
+.converterBlock {
+    width: 300px;
+    background-color: #1681d2;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.converterName {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.converterValue {
+    margin-top: 15px;
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.converterValue img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.converterSelect {
+    cursor: pointer;
+    background-color: #ffffff52;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.converterResult input {
+    color: #fff !important;
+}
+
+.iconBlock {
+    width: 50px;
+    height: 50px;
+    background-color: #1681d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

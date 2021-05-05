@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
+import CurrenciesList from "./pages/CurrenciesList/CurrenciesList";
+import Converter from "./pages/Converter/Converter";
+import { Header } from "./components/";
+import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { getCurrencies } from "./redux/actions/currencies";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
+
+    React.useEffect(() => {
+        dispatch(getCurrencies())
+    }, [])
+
+    // Если поле фильтра непустое и валюта активна, то возвращается отфильтрованный массив и выбранная валюта,
+    // иначе возвращается весь массив
+    const currencies = state.currentFilterValue !== '' && state.activeCurrency !== null
+        ? [...state.filteredCurrencies, state.currencies.find(currency => currency.CharCode === state.activeCurrency)]
+        : state.currencies
+
+
+    return (
+        <div className="App">
+            <Header />
+            <Route path='/list'
+                   render={() => <CurrenciesList currencies={currencies} activeCurrency={state.activeCurrency} />} />
+            <Route path='/converter' component={Converter} />
+        </div>
+    );
 }
 
 export default App;

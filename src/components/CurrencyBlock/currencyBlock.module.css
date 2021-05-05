@@ -1,0 +1,50 @@
+.currencyContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currencyBlock {
+    width: 510px;
+    background-color: #1681d2;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.currencyName{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+}
+
+.currencyValue {
+    margin-top: 15px;
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.currencyBlock img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.diff {
+    margin-right: 20px;
+}
+
+.diff svg {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.diff svg.more{
+    transform: rotate(-90deg);
+}
+
+.diff + svg.less{
+    transform: rotate(90deg)
+}

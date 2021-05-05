@@ -1,0 +1,12 @@
+@import "~react-md/dist/react-md";
+
+@include react-md-utils;
+
+
+.rmd-text-field-container{
+  max-width: 40%;
+}
+
+.rmd-text-field-addon {
+  display: none;
+}
