@@ -1,3 +1,15 @@
+# Используемые технологии:
+
+- React
+- Redux
+- Redux-thunk
+- Redux-logger
+- React Router
+- React Material Design
+- Axios
+- CSS Modules
+- PropTypes
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

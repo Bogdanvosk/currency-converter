@@ -1,5 +1,6 @@
 import React from 'react';
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
+import PropTypes from 'prop-types'
 import { filterCurrencies, setActiveCurrency, setDiff, updateCurrentFilterValue } from "../../redux/actions/currencies";
 import { TextField } from '@react-md/form'
 
@@ -45,3 +46,13 @@ const CurrenciesList = ({ currencies, activeCurrency }) => {
 }
 
 export default CurrenciesList
+
+CurrenciesList.propTypes = {
+    currencies: PropTypes.arrayOf(PropTypes.object),
+    activeCurrency: PropTypes.string
+}
+
+CurrenciesList.defaultProps = {
+    currencies: [],
+    activeCurrency: ''
+}

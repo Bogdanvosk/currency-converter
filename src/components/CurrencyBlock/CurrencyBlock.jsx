@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import styles from './currencyBlock.module.css'
 import switchIcon from '../../assets/switch.svg'
 import classNames from "classnames";
+import PropTypes from "prop-types";
+import CurrenciesList from "../../pages/CurrenciesList/CurrenciesList";
 
 const CurrencyBlock = ({ currencies }) => {
     const state = useSelector(state => state)
@@ -55,3 +57,11 @@ const CurrencyBlock = ({ currencies }) => {
 };
 
 export default CurrencyBlock;
+
+CurrencyBlock.propTypes = {
+    currencies: PropTypes.arrayOf(PropTypes.object)
+}
+
+CurrencyBlock.defaultProps = {
+    currencies: []
+}
