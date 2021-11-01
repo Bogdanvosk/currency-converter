@@ -10,7 +10,6 @@ const initialState = {
     secondCurrency: 'EUR',
     firstCurrencyValue: 1,
     secondCurrencyValue: null
-
 }
 
 const currenciesReducer = (state = initialState, action) => {
