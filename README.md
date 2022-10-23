@@ -1,3 +1,5 @@
+## Site is live at https://bogdanvosk.github.io/currency-converter/
+
 # Используемые технологии:
 
 - React
